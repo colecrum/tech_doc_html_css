@@ -1,3 +1,14 @@
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
+/* NAV -------------------------------------------------*/
+
+/* Setting up sidenav container */
 .sidenav {
   height: 100%;
   width: 160px;
@@ -10,6 +21,7 @@
   padding-top: 20px;
 }
 
+/* Styling nav anchor tags */
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
@@ -18,20 +30,22 @@
   display: block;
 }
 
+/* Nav hover effect */
 .sidenav a:hover {
   color: #f1f1f1;
 }
 
-main {
-  margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 15px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
+/* SM Mobile sizing */
 @media screen and (max-height: 450px) {
   #navbar {padding-top: 15px;}
   #navbar a {font-size: 18px;}
   #navbar {position: fixed;}
+}
+
+/* Mobile sizing */
+@media only screen and (max-width: 600px) {
+  #navbar a {font-size: 14px;}
+  #nav-header {font-size: 16px;}
 }
 
 #nav-header {
@@ -45,23 +59,46 @@ header {
   font-weight: bold;
 }
 
+/* MAIN ---------------------------------------------*/
+
+main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 15px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
 section {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
+/* content styling */
 blockquote {
-    padding: 15px;
-    background: #eee;
-    border-radius: 5px;
+  margin: 0;
+  padding: 15px;
+  background: #eee;
+  border-radius: 5px;
 }
 
+
+
+@media only screen and (max-width: 600px) {
+
+  code {max-width: 100%;}
+}
+
+/* Radio survey */
 #radio-helpful {
   display: flex;
   flex-direction: row;
   font-weight: bold;
   font-size: 20px;
   padding: 20px;
+}
+
+/* Size down font to allow room for radio buttons */
+@media only screen and (max-width: 600px) {
+  #radio-helpful {font-size: 16px;}
 }
 
 #yes {
@@ -72,23 +109,50 @@ blockquote {
   margin-left: 15px;
 }
 
+/* SIGN-OFF --------------------------------------------*/
+
+/*designed by & contact*/
 #contact-section {
   color: black;
   text-align: center;
+  min-height: 33vh;
+}
+
+#design-line {
+  background-color: purple;
+  height: 2px;
 }
 
 .contact-links {
   height: auto;
-  width: 100%;
+  width: 25%;
+  display: inline-block;
+  padding: 20px;
+}
+
+.link-cont {
+  float: left;
+  width: 25%;
 }
 
 .contact-img {
   height: 75px;
   width: 75px;
-  padding: 25px;
 }
 
 #git-logo {
   height: 75px;
-  width: 125px;
+  width: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-links {width: 100%;}
+  .contact-img {
+    height: 50px;
+    width: 50px;
+  }
+  #git-logo {
+    height: 50px;
+    width: 75px;
+  }
 }
