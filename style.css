@@ -35,6 +35,17 @@ body {
   color: #f1f1f1;
 }
 
+#nav-header {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+header {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 /* SM Mobile sizing */
 @media screen and (max-height: 450px) {
   #navbar {padding-top: 15px;}
@@ -46,17 +57,10 @@ body {
 @media only screen and (max-width: 600px) {
   #navbar a {font-size: 14px;}
   #nav-header {font-size: 16px;}
-}
-
-#nav-header {
-  font-size: 20px;
-  color: white;
-  text-align: center;
-}
-
-header {
-  font-size: 30px;
-  font-weight: bold;
+  .sidenav {
+    width: 25%;
+    overflow-x: scroll;
+  }
 }
 
 /* MAIN ---------------------------------------------*/
@@ -80,13 +84,6 @@ blockquote {
   border-radius: 5px;
 }
 
-
-
-@media only screen and (max-width: 600px) {
-
-  code {max-width: 100%;}
-}
-
 /* Radio survey */
 #radio-helpful {
   display: flex;
@@ -96,17 +93,22 @@ blockquote {
   padding: 20px;
 }
 
-/* Size down font to allow room for radio buttons */
-@media only screen and (max-width: 600px) {
-  #radio-helpful {font-size: 16px;}
-}
-
 #yes {
   margin-left: 30px;
 }
 
 #no {
   margin-left: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  code {max-width: 100%;}
+  main {margin-left: 100px;}
+}
+
+/* Size down font to allow room for radio buttons */
+@media only screen and (max-width: 600px) {
+  #radio-helpful {font-size: 16px;}
 }
 
 /* SIGN-OFF --------------------------------------------*/
@@ -155,4 +157,8 @@ blockquote {
     height: 50px;
     width: 75px;
   }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .contact-links {width: 100%;}
 }
