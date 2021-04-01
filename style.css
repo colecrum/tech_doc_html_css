@@ -63,6 +63,13 @@ header {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .sidenav {
+    overflow-x: scroll;
+  }
+  #navbar a {font-size: 21px;}
+}
+
 /* MAIN ---------------------------------------------*/
 
 main {
@@ -160,5 +167,9 @@ blockquote {
 }
 
 @media screen and (max-width: 800px) and (orientation: landscape) {
+  .contact-links {width: 100%;}
+}
+
+@media screen and (max-width: 1000px) {
   .contact-links {width: 100%;}
 }
